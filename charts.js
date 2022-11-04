@@ -113,12 +113,6 @@ function init() {
       // 10. Use Plotly to plot the data with the layout. 
       Plotly.newPlot("bar", barData, barLayout, {responsive: true});
   
-      // Bar and Bubble charts
-      // Create the buildCharts function.
-      //function buildCharts(sample) {
-      // Use d3.json to load and retrieve the samples.json file 
-      //d3.json("samples.json").then((data) => {
-  
       // 1. Create the trace for the bubble chart.
       var bubbleData = [{
         x: otuIds,
@@ -158,7 +152,7 @@ function init() {
         {
           domain: { x: [0, 1], y: [0, 1] },
           value: washFreq,
-          title: { text: "<b>Belly Button Washing Frequency</b><br>Scrubs per week"},
+          title: { text: "Belly Button Washing Frequency<br>Scrubs per week"},
           type: "indicator",
           mode: "gauge+number",
           gauge: {
@@ -178,6 +172,7 @@ function init() {
           }
         }
       ];
+      // console.log("Hello")
       
       // 5. Create the layout for the gauge chart.
       var gaugeLayout = { 
@@ -198,3 +193,4 @@ function init() {
       Plotly.newPlot("gauge", gaugeData, gaugeLayout, {responsive: true});
     });
   }
+  console.log("Hello")
